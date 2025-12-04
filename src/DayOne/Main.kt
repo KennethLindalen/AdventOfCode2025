@@ -1,7 +1,9 @@
 package DayOne
 
+import common.cleanInput
+
 fun calculateNewPlacement(start: Int, rotationRaw: String): IntArray {
-    val rotation = rotationRaw.replace("\uFEFF", "").trim()
+    val rotation = cleanInput(rotationRaw)
     if (rotation.isEmpty()) return intArrayOf(start, 0)
 
     val direction: Char = rotation.first()

@@ -1,8 +1,7 @@
 package DayTwo
 
-fun cleanInput(input: List<String>): List<String> {
-    return input.map { it.replace("\uFEFF", "").trim() }
-}
+import common.cleanInput
+
 
 fun splitIntoParts(input: String, parts: Int): List<String>? {
     if (input.length % parts != 0) return null
