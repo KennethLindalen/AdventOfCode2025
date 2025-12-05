@@ -21,7 +21,6 @@ fun mergeRanges(ranges: List<LongRange>): List<LongRange> {
     var currentEnd = sorted[0].last
 
     for (range in sorted.drop(1)) {
-
         if (range.first <= currentEnd + 1) {
             if (range.last > currentEnd) {
                 currentEnd = range.last
